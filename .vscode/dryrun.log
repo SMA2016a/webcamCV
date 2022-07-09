@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/wp/samples/webcamCV'
+ 
+g++ -I/opt/pylon/include   -c -o Grab.o Grab.cpp
+g++ -Wl,--enable-new-dtags -Wl,-rpath,/opt/pylon/lib -o Grab Grab.o -L/opt/pylon/lib -Wl,-E -lpylonbase -lpylonutility -lGenApi_gcc_v3_1_Basler_pylon -lGCBase_gcc_v3_1_Basler_pylon
+make: Leaving directory '/wp/samples/webcamCV'
+ 
